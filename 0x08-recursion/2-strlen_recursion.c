@@ -14,5 +14,20 @@ int _strlen_recursion(char *s)
 	}
 
 	s++;
-	return (_strlen_recursion(s) + 1);
+	return (1 + _strlen_recursion(s + 1));
+}
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 Success
+ */
+int main(void)
+{
+	int length;
+
+	length = _strlen_recursion("Corbin Coleman");
+	printf("%d/n", length);
+	return (0);
 }
